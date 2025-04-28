@@ -15,7 +15,7 @@ $safe_output = htmlspecialchars($user_input, ENT_QUOTES, 'UTF-8');
 echo $safe_output; // Выведет: &lt;script&gt;alert('XSS');&lt;/script&gt;
 ?>
 ```
-## 2. Защита от Information Disclosure (1 балл)
+## 2. Защита от Information Disclosure 
 
 **Уязвимость:** Утечка чувствительной информации (например, версии PHP, путей к файлам).
 
@@ -31,7 +31,7 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ?>
 ```
-## 3. Защита от SQL Injection (2 балла)
+## 3. Защита от SQL Injection 
 
 **Уязвимость:** Возможность внедрения SQL-кода через пользовательский ввод.
 
@@ -49,7 +49,7 @@ $stmt->execute(['username' => $_POST['username']]);
 $user = $stmt->fetch();
 ?>
 ```
-## 4. Защита от CSRF (Cross-Site Request Forgery) (2 балла)
+## 4. Защита от CSRF (Cross-Site Request Forgery) 
 
 **Уязвимость:** Возможность выполнения действий от имени пользователя без его ведома.
 
@@ -83,7 +83,7 @@ if ($_POST['csrf_token'] !== $_SESSION['csrf_token']) {
 ```
 
 
-## 5. Защита от Include и Upload уязвимостей (1 балл)
+## 5. Защита от Include и Upload уязвимостей
 
 ### Include уязвимости
 
